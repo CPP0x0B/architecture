@@ -25,7 +25,6 @@ public class TimeBasedAccessInterceptor extends HandlerInterceptorAdapter{
             Object handler) throws Exception {
         Calendar cal = Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR_OF_DAY);
-System.out.println(hour);        
         if (openingTime <= hour && hour < closingTime) {
             return true;
         }
@@ -36,7 +35,6 @@ System.out.println(hour);
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
-		System.out.println("123123123");
 		super.postHandle(request, response, handler, modelAndView);
 	}
 }

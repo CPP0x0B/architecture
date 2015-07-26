@@ -1,5 +1,12 @@
 package me.fenglu.service;
 
-public class HelloService {
+import org.springframework.stereotype.Service;
 
+@Service
+public class HelloService {
+	
+	public void test() {
+		System.out.println("service test");
+	}
+	
 }

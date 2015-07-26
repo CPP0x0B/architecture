@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableLoadTimeWeaving;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -17,10 +16,9 @@ import org.springframework.web.servlet.view.JstlView;
 
 import me.fenglu.interceptor.TimeBasedAccessInterceptor;
 
-@EnableLoadTimeWeaving
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages={"me.fenglu.controller","me.fenglu.service","me.fenglu.repository"})
+@ComponentScan(basePackages={"me.fenglu.controller"})
 public class MvcConfig extends WebMvcConfigurerAdapter{
 	
 	@Bean
