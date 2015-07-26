@@ -6,3 +6,4 @@
 /target/test-classes/*
 /target/architecture/WEB-INF/lib/*
 /target/architecture/WEB-INF/classes/*
+/target/
