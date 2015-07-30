@@ -12,7 +12,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<javaee-api-version>7.0</javaee-api-version>
-		<hibernateVersion>4.3.9.Final</hibernateVersion>
+		<hibernateVersion>4.3.10.Final</hibernateVersion>
 	</properties>
 	<packaging>war</packaging>
 	<name>The architecture Project</name>
@@ -225,6 +225,24 @@
 			<artifactId>struts2-core</artifactId>
 			<version>${struts2Version}</version>
 		</dependency>
+		
+		<!-- LOG -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		
 
 		<!-- Github -->
 		<dependency>
