@@ -1,8 +1,4 @@
 .classpath
 .project
 /.settings/
-/src/test/*
-/target/classes/*
-/target/test-classes/*
-/target/architecture/WEB-INF/lib/*
-/target/architecture/WEB-INF/classes/*
+/target/
