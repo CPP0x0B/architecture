@@ -11,6 +11,5 @@ public class TestSpringAOP {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(new Class[] {AppConfigMain.class});
 		HelloService helloService = (HelloService) ctx.getBean("helloService");
-		helloService.test();
 	}
 }

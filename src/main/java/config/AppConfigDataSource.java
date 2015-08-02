@@ -3,6 +3,7 @@ package config;
 import java.beans.PropertyVetoException;
 import java.util.Properties;
 
+import org.hibernate.FlushMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -49,7 +50,7 @@ public class AppConfigDataSource {
 		return template;
 	}
 	
-	@Bean
+	@Bean(name="sessionFactory")
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource());

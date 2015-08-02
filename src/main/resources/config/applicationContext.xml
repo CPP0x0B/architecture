@@ -11,6 +11,7 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 	<context:annotation-config/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
 	<aop:aspectj-autoproxy/>
 	<bean id="aspectConfig" class="config.AspectConfig"/>
 	<context:component-scan base-package="me.fenglu.controller"/>

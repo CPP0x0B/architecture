@@ -7,7 +7,6 @@
 <title>hello</title>
 </head>
 <body>
-	hello${ user.username }
-	${ student.username }
+	hello${ user.id }
 </body>
 </html>

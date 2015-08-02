@@ -12,14 +12,7 @@ public class AspectConfig {
 	
 	@Pointcut("execution(* me.fenglu.service.*.*(..))")
     public void businessController() {
-		System.out.println(123);
 	}
-	
-	
-	/*@Before("execution(* me.fenglu.controller.*.*(..))")
-	public void before() {
-		System.out.println(new Date());
-	}*/
 	
 	public void moniter() {
 		System.out.println(23);

@@ -22,9 +22,14 @@ public class HelloController {
 	@RequestMapping("/hello.do")
 	@ModelAttribute
 	public void hello(@RequestParam String username, Model model) {
-		helloService.test();
 		User u = new User();
-		u.setUsername(username);
+		u.setAge(18);
+		u.setSex(0);
+		try {
+			helloService.add(u);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		Student s = new Student();
 		s.setUsername("123");
 		model.addAttribute(u);
