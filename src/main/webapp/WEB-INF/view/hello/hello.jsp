@@ -8,5 +8,6 @@
 </head>
 <body>
 	hello${ user.id }
+	<a href="/user/update.do?id=${ user.id }">修改USER</a>
 </body>
 </html>

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableLoadTimeWeaving
+//@EnableLoadTimeWeaving
 @EnableAspectJAutoProxy
 @EnableScheduling
 @EnableTransactionManagement

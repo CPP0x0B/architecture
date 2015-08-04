@@ -20,5 +20,9 @@ public class HelloService {
 		helloRepository.add(u);
 		System.out.println(u.getAge());
 	}
+
+	public User fetch(String id) {
+		return helloRepository.fetch(id);
+	}
 	
 }

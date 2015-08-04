@@ -1,26 +1,22 @@
 package me.fenglu.repository;
 
-import java.sql.SQLException;
-
 import javax.inject.Inject;
 
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import me.fenglu.model.User;
 
 @Repository
-public class HelloRepository {
+public class UserRepository {
 	
 	@Inject
 	private HibernateTemplate hibernateTemplate;
 	
-	public void add(User u) throws SQLException {
-		hibernateTemplate.save(u);
-	}
-
-	public User fetch(String id) {
-		return hibernateTemplate.get(User.class, id);
+	@Transactional(readOnly=false)
+	public void saveOrUpdate(User u) throws Exception {
+		hibernateTemplate.saveOrUpdate(u);
 	}
 
 }
