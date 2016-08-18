@@ -12,7 +12,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<javaee-api-version>7.0</javaee-api-version>
-		<hibernateVersion>4.3.10.Final</hibernateVersion>
+		<hibernateVersion>5.0.4.Final</hibernateVersion>
 	</properties>
 	<packaging>war</packaging>
 	<name>The architecture Project</name>
@@ -25,27 +25,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	<repositories>
-		<!-- <repository>
-			<id>ZK CE</id>
-			<name>ZK CE Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
-		</repository>
-		<repository>
-			<id>ZK EVAL</id>
-      		<name>ZK Evaluation Repository</name>
-			<url>http://mavensync.zkoss.org/eval</url>
-		</repository>
-		-->
-	</repositories>
-	<pluginRepositories>
-		<!-- <pluginRepository>
-			<id>zkmaven</id>
-			<name>ZK Maven Plugin Repository</name>
-			<url>http://mavensync.zkoss.org/maven2/</url>
-		</pluginRepository>
-		-->
-	</pluginRepositories>
+	
 	<dependencies>
 		<!-- JavaEE 7.0 -->
 		<dependency>
@@ -217,15 +197,15 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.6</version>
 		</dependency>
-		
-		
+
+
 		<!-- struts -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
 			<version>${struts2Version}</version>
 		</dependency>
-		
+
 		<!-- LOG -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -242,7 +222,7 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		
+
 
 		<!-- Github -->
 		<dependency>
@@ -288,6 +268,17 @@
 		 -->
 	</dependencies>
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 		<finalName>architecture</finalName>
 	</build>
 </project>
