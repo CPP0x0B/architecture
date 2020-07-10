@@ -7,7 +7,7 @@
   <properties>
 		<zk.version>7.0.3</zk.version>
 		<GsonVersion>2.3.1</GsonVersion>
-		<struts2Version>2.3.24</struts2Version>
+		<struts2Version>2.3.34</struts2Version>
 		<springVersion>5.2.7.RELEASE</springVersion>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
